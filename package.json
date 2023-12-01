@@ -1,5 +1,5 @@
 {
-  "name": "PLUGIN NAME",
+  "name": "ps_timeseries",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,21 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+<REPOSITORY PLUGIN>"
+    "url": "git+https://github.com/g3w-suite/g3w-client-plugin-ps-timeseries.git"
   },
   "keywords": [
-    "editing",
+    "ps time series",
     "plugin"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "GIS3W",
+  "license": "MPL-2.0",
   "bugs": {
-    "url": "<REPOSITORY PLUGIN>issues"
+    "url": "https://github.com/g3w-suite/g3w-client-plugin-ps-timeseries/issues"
   },
-  "homepage": "<REPOSITORY PLUGIN>#readme",
-  "browserslist": "defaults",
-  "engines" : {
-    "node" : ">=16.13.2",
-    "npm": ">=8.1.2"
-  }
+  "homepage": "https://github.com/g3w-suite/g3w-client-plugin-ps-timeseries/blob/main/README.md"
 }
