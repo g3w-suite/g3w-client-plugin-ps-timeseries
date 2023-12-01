@@ -1,3 +1,3 @@
-# g3w-client-plugin-queryresult
+# g3w-client-plugin-ps-timeseries
 
-This is a base plugin queryresult repository that can be used as template for create new G3W-CLIENT plugin repository that need to liste queryresults ***setters***
+This plugin is based on PS Time Series Viewer QGIS plugin https://plugins.qgis.org/plugins/pstimeseries/
