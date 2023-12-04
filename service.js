@@ -20,12 +20,16 @@ function Service() {
      */
     this.queryresultsService = GUI.getService('queryresults');
 
-    const keyOnAfterSetActionsForLayers = this.queryresultsService.onafter('addActionsForLayers', (actions, layers) => {
+    const keyOnAfteraddActionsForLayers = this.queryresultsService.onafter('addActionsForLayers', (actions, layers) => {
       //FAKE id
+      /**
+       *
+       * @TODO REMOVE
+       */
       const layerId = 'test_1b5433f4_9459_4bd8_99c1_8a79da9e5043';
 
-      if (layers.find(({id}) => id === layers)) {
-        actions[layers].push({
+      if (layers.find(({id}) => id === layerId)) {
+        actions[layerId].push({
           id: 'ps-timeseries',
           class: GUI.getFontClass('chart-line'),
           hint: 'Ps Timeseries',
@@ -48,15 +52,19 @@ function Service() {
        * @TODO
        */
     })
-    this.keySetters[keyOnAfterSetActionsForLayers] = 'setActionsForLayers'
-
+    this.keySetters[keyOnAfteraddActionsForLayers] = 'addActionsForLayers';
   };
 
+  /**
+   * Clear
+   */
   this.clear = function() {
     /**
      * Unlisten to setters call events
      */
-    Object.enties(this.keySetters).forEach(([key, setter]) => this.queryresultsService.un(setter, key));
+    Object
+      .enties(this.keySetters)
+      .forEach(([key, setter]) => this.queryresultsService.un(setter, key));
   }
 }
 
