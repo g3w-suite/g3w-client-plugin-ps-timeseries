@@ -14,8 +14,6 @@ class Service extends PluginService {
 
   init(config = {}) {
 
-    console.log(config);
-
     /**
      * @FIXME add description
      */
@@ -48,7 +46,7 @@ class Service extends PluginService {
         actions[layer.id].push({
           id: 'ps-timeseries',
           class: GUI.getFontClass('chart-line'),
-          hint: 'Ps Timeseries',
+          hint: 'PS Time Series',
           cbk: async (layer, feature) => {
             const Component   = Vue.extend(ChartComponent);
             const vueInstance = new Component({ propsData: { fid: feature.attributes[G3W_FID] } });
@@ -57,7 +55,7 @@ class Service extends PluginService {
           }
         });
       });
-    })
+    });
 
     this.keySetters[keyOnAfteraddActionsForLayers] = 'addActionsForLayers';
   }
@@ -76,7 +74,6 @@ class Service extends PluginService {
 new (class extends Plugin {
   constructor() {
     super({ name, i18n, service: new Service });
-    console.log(this.config);
     if (this.registerPlugin(this.config.gid)) {
       this.service.init(this.config);
     }
